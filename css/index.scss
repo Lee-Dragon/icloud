@@ -1,0 +1,490 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+ul{
+  margin: 0;
+}
+@font-face {
+  font-family: 'share';
+  src:url(../iconfont.woff);
+}
+.icon-wuxianwangluo:before { content: "\e629"; }
+body{
+  background: url(../images/packed-4.png);
+  background-position: top left;
+  background-repeat: repeat;
+}
+@import "mixin";
+$color:purple,green,blue,yellow,brown,orange,pink;
+$color-list:('purple': -17px -571px,'green':-85px -571px,'blue':-68px -571px,'yellow':-34px -571px,'brown':-133px -549px,'orange':-51px -571px,'pink':-102px -571px);
+$cir-list:('purple':0 -228px,'green':0 -253px,'blue': 0 -278px,'yellow':0 -303px,'brown':0 -328px,'orange':0 -378px,'pink':0 -353px);
+$active-list:('purple':0 -465px,'green':-32px -401px,'blue': -74px -359px,'yellow':-136px -199px,'brown':-32px -433px,'orange':-96px -465px,'pink':-64px -401px);
+$doing-list:('purple':-64px -465px,'green':-42px -359px,'blue': -136px -167px,'yellow':-136px -267px,'brown':-96px -433px,'orange':0 -433px,'pink':-128px -401px);
+
+.list-box{
+  width: 28%;
+  height: 100vh;
+  background: #383836;
+  position:relative;
+  float: left;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  .title{
+    height: 44px;
+    width: 100%;
+    border-bottom: 1px solid #1a1a1a;
+    .logo{
+      background: url(../images/packed-5.png) no-repeat;
+      background-position: 0 -588px;
+      width: 56px;
+      height: 16px;
+      top: 14px;
+      left: 12px;
+      position: absolute;
+    }
+    .plus{
+        width: 16px;
+      height: 16px;
+      top: 14px;
+      right: 12px;
+      position: absolute;
+      color: #fff;
+      font-size: 24px;
+      line-height: 16px;
+
+    }
+  }
+  .plan{
+    height: 42px;
+    width: 100%;
+    position: relative;
+    border-bottom:1px solid rgba(0,0,0,.2);
+    .clock{
+      //position: absolute;
+      display: inline-block;
+      height:42px;
+      width: 42px;
+      background: url(../images/packed-5.png) no-repeat 0 -359px;
+    }
+    .indro{
+      line-height: 42px;
+
+      height: 42px;
+      @include top-bottom;
+      left: 50px;
+      color: rgba(255,255,255,.8);
+    }
+  }
+  .list-group{
+    margin: 0;
+    color:#fff;
+    .list-group-item{
+      border-radius: 0;
+      background:none;
+      position: relative;
+      height: 42px;
+      width: 100%;
+      border: 0;
+      margin: 0;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+      @debug aa;
+      &>span{
+          @include top-bottom;
+        //width: 40px;
+        height: 40px;
+        line-height: 40px;
+        left: 50px;
+
+      }
+      &.edit{
+        input{
+          display: block;
+        }
+        &>span{
+          display: none;
+        }
+      }
+
+     @each $c in map_keys($color-list){
+       &.#{$c} .theme{
+         background-position: map_get($color-list,$c);
+       }
+     }
+
+      &.active{
+        background: rgb(45,45,43);
+
+      }
+      .theme {
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        background: url(../images/packed-5.png) no-repeat ;
+      }
+      input{
+        position: absolute;
+        display: none;
+        left: 50px;
+        background:none;
+        border: none;
+        outline: none;
+      }
+      .share{
+        @include top-bottom;
+        right: 5px;
+        font-family: 'share'!important;
+        width:20px;
+        height: 20px;
+        font-style: normal;
+        color:rgba(0,0,0,.4);
+        opacity: 1;
+        &:hover{
+          color: rgba(255,255,255,0.1);
+          //opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+.remider{
+  width: 72%;
+  //min-width: 690px;
+  position: relative;
+  float: left;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  bottom: 0;
+  .search-box{
+    height: 44px;
+    position: relative;
+    font-size: 20px;
+    width: 100%;
+    .icon{
+      width: 24px;
+      height: 24px;
+      @include top-bottom;
+      left: 10px;
+      background: url(../images/packed-5.png) no-repeat -138px  -359px;
+
+    }
+    input{
+      width: 80%;
+      height: 100%;
+      position: absolute;
+      left:5%;
+      top: 0;
+      border: 0;
+      background: none;
+    }
+  }
+  .title-box{
+    height: 62px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 28px;
+    padding-top: 12px;
+    background: none;
+    position: relative;
+    .title{
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      height: 100%;
+      width: 100%;
+      font-size: 35px;
+      @each $b in $color{
+        &.#{$b}{
+          color: $b!important;
+        }
+      }
+    }
+    .sel-box{
+     @include top-bottom;
+      right: 5%;
+      width: 60px;
+      height: 40px;
+      //background: pink;
+      line-height: 40px;
+      text-align: center;
+      font-size: 20px;
+      cursor: pointer;
+
+    }
+  }
+  .item-done{
+    line-height: 50px;
+    //margin-left: 60px;
+    //margin-bottom: 20px;
+    font-size: 20px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    color: rgba(0,0,0,.4);
+    li{
+
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+  }
+  //.item-new{
+  .item{
+      line-height: 50px;
+      height: 50px;
+      border: 1px solid transparent;
+      position: relative;
+        .content{
+          border-bottom: 1px solid rgba(0,0,0,.5);
+          input{
+            background: none;
+            border: 0;
+            outline: none;
+            display: none;
+          }
+        }
+    &.zong{
+      //background: pink;
+      padding-left:5%;
+      box-sizing: border-box;
+      .zi{
+        margin-left:5%;
+      }
+      .clear{
+        margin-left: 70%;
+      }
+      .icon{
+        background: url(../images/packed-5.png) no-repeat;
+        background-position: -70px -530px;
+        transition: all .3s ease;
+        width: 20px;
+        height: 15px;
+        @include top-bottom;
+        transition: all .3s ease;
+        cursor: pointer;
+      }
+      &.active{
+        .icon{
+          width: 20px;
+          height: 15px;
+          @include top-bottom;
+          cursor: pointer;
+          transform: rotate3d(0,0,1,-90deg);
+        }
+      }
+    }
+    &>.fix{
+      background: none;
+      border: 0;
+      outline: none;
+      margin-left: 12%;
+    }
+    .del{
+      position: absolute;
+      right: 20px;
+      top:0;
+      width: 100px;
+      height: 50px;
+      line-height: 40px;
+      opacity: 0;
+    }
+    @each $c in $color{
+      &.active.#{$c}{
+        background: rgba($c,0.1);
+        border:1px solid $c;
+        //opacity: 0.1;
+        .del{
+          opacity: 1;
+        }
+        .content{
+          span{
+            display: none;
+          }
+          input{
+            display: block;
+          }
+        }
+      }
+      &.#{$c}{color:$c;}
+    }
+
+        &.doing{
+          padding-left:12%;
+          box-sizing: border-box;
+
+          .icon{
+            @include top-bottom;
+            left: 5%;
+            background: url(../images/packed-5.png) no-repeat ;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            @each $ii in map_keys($doing-list){
+              &.#{$ii}{
+                background-position: map_get($doing-list,$ii);
+              }
+            }
+          }
+
+        }
+        &.did{
+          padding-left:12%;
+          box-sizing: border-box;
+          .icon{
+            @include top-bottom;
+            left: 5%;
+            background: url(../images/packed-5.png) no-repeat ;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            @each $a in map_keys($active-list){
+              &.#{$a}{
+                background-position: map_get($active-list,$a);
+              }
+            }
+          }
+        }
+        &.xin{
+            font-size: 20px;
+            color: rgba(0,0,0,.7);
+            //background: pink;
+        }
+    }
+  hr{
+    height: 1px;
+    width: 100%;
+    line-height: 50px;
+    margin: 5px 0;
+  }
+  //}
+  //.ni{
+  //  width: 600px;
+  //  height: 500px;
+  //  position: absolute;
+  //  z-index: 1000;
+  //  //background: orange;
+  //}
+  .sel{
+    display: none;
+    z-index: 100;
+    width: 355px;
+    height: 226px;
+    position: absolute;
+    box-shadow: 0 0 15px rgba(0,0,0,.15),0 0 1px 1px rgba(0,0,0,.1);
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.1);
+    top: 150px;
+    right: 150px;
+    background:#fff;
+    input{
+      width: 314px;
+      height: 42px;
+      //border: rgba(0,0,0,.1);
+      outline: none;
+      //background: yellowgreen;
+      margin: 0 auto;
+      box-sizing: border-box;
+      margin-top: 20px;
+      line-height: 42px;
+      font-size: 20px;
+      margin-left: 20px;
+    }
+    &>span{
+      display: block;
+      text-align: left;
+      box-sizing: border-box;
+      padding: 20px 0 0 20px;
+      font-size: 16px;
+      height: 42px;
+      line-height: 22px;
+
+    }
+    .color-sel{
+      width: 314px ;
+      height: 33px;
+      margin: 12px auto;
+
+      li{
+        margin-left: 5px;
+        //display: inline-block;
+        padding: 3px 0;
+        box-sizing: border-box;
+        width: 32px;
+        height: 32px;
+        float: left;
+        background: url(../images/stylesheet-1.png) no-repeat ;
+        //background-size: cover;
+        background-clip: content-box;
+        @each $i in map_keys($cir-list){
+          &.#{$i}{
+            background-position: map_get($cir-list,$i);
+          }
+        }
+        @each $r in map_keys($active-list){
+          &.active.#{$r}{
+            width: 32px;
+            height: 32px;
+            background: url(../images/packed-5.png) no-repeat;
+            background-position: map_get($active-list,$r);
+            color: $r;
+          }
+        }
+
+
+        &:nth-child(1){
+          margin-left:0;
+        }
+      }
+
+    }
+    .button{
+      border-top: 1px solid rgba(0,0,0,.1);
+      height: 60px;
+      width: 100%;
+      position: relative;
+      line-height: 60px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      span{
+        display: inline-block;
+        line-height: 40px;
+        height: 40px;
+        font-size: 18px;
+        cursor: pointer;
+        &#del{
+          width: 50px;
+          color:#ff3b30;
+        }
+        &#cancel{
+          width: 150px;
+          text-align: right;
+          color: #007aff;
+
+        }
+        &#enter{
+          width: 50px;
+          text-align: left;
+          font-weight: bold;
+          color: #007aff;
+        }
+        &#shu{
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  #op{
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    //background: pink;
+    width: 60px;
+    height: 50px;
+    z-index: 100;
+    font-size: 24px;
+  }
+}

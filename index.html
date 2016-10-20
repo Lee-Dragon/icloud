@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" ng-app="reminder">
+<head>
+    <meta charset="UTF-8">
+    <title>icloud</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/angular.js"></script>
+    <!--<script src="https://cdn.bootcss.com/angular.js/1.5.8/angular.js"></script>-->
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<div class="list-box">
+    <div class="title">
+        <div class="logo"></div>
+        <div class="plus glyphicon glyphicon-plus" ng-click="add()"></div>
+    </div>
+    <div class="plan">
+        <i class="clock"></i>
+        <div class="indro">已计划</div>
+    </div>
+   <cate-ul >
+       <li  class="list-group-item {{v.theme}}" ng-repeat="v in cates" data-id="{{v.id}}" ng-click="setCurrent(v)">
+           <div class="theme" ></div>
+           <span>{{v.title}}</span>
+           <input type="text" ng-model="v.title" class="item">
+           <i class="share icon-font icon-wuxianwangluo"></i>
+       </li>
+   </cate-ul>
+</div>
+<div class="remider">
+    <div class="search-box">
+        <div class="icon"></div>
+        <input type="text" placeholder="搜索所有提醒">
+    </div>
+    <div class="big" my-jia>
+        <div class="title-box">
+            <div class="title {{current.theme}}" >{{current.title}}</div>
+
+        </div>
+        <my-option>
+            <div id="op" style="color:{{current.theme}}">选项</div>
+            <div class="sel">
+                <input type="text" ng-model="current.title">
+                <span>列表颜色</span>
+                <ul class="color-sel">
+                    <li ng-repeat="v in colors" class="{{v}} " ng-class="{active:v==current.theme}" >
+
+                    </li>
+
+                </ul>
+                <div class="button">
+                    <span id="del" ng-click="delCat(current.id)">删除</span>
+                    <span id="cancel">取消</span>
+                    <span id="shu">|</span>
+                    <span id="enter">完成</span>
+                </div>
+            </div>
+
+        </my-option>
+
+        <my-list>
+            <div class=" item zong">
+                <span class="icon " ></span>
+                <span class="zi">总：{{index}}项</span>
+                <span class="clear" ng-click="clear()" style="color:{{current.theme}}">清除已完成</span>
+            </div>
+            <ul class="yin">
+                <li ng-repeat="v in current.todos|filter:{state:1}" class="item did {{current.theme}}" data-id="v.id">
+                    <div class="icon {{current.theme}}" ng-click="v.state=0;isdone()"></div>
+                    <div class="content">
+                        <span>{{v.title}}</span>
+                        <input type="text" value="{{v.title}}">
+                    </div>
+                    <span class="del btn btn-waring" ng-click="deltodo(v.id)">删除</span>
+
+                </li>
+            </ul>
+            <hr>
+            <ul>
+                <li ng-repeat="v in current.todos|filter:{state:0}" class="item doing {{current.theme}}" data-id="v.id">
+                    <div class="icon {{current.theme}}" ng-click="v.state=1;done()"> </div>
+                    <div class="content">
+                        <span>{{v.title}}</span>
+                        <input type="text" value="{{v.title}}">
+                    </div>
+                    <span class="del btn btn-waring" ng-click="deltodo(v.id)">删除</span>
+                </li>
+                <li class="item xin">
+                    <div  ng-model="tt" class="fix"  ng-click="addtodo($event)">新条目...</div>
+
+                </li>
+            </ul>
+        </my-list>
+
+    </div>
+
+    <!--<div class="add">-->
+
+    <!--</div>-->
+    <!--<div class="container">-->
+        <!--<ul class="item-new">-->
+
+            <!--<li class=" item done" >-->
+                <!--<div class="icon"></div>-->
+                <!--<input type="text" placeholder="done" class="do">-->
+            <!--</li>-->
+            <!--<li class="item doing">-->
+                <!--<div class="icon"></div>-->
+                <!--<input type="text" placeholder="新条目1" class="do">-->
+            <!--</li>-->
+            <!--<li class="item xin">-->
+                <!--&lt;!&ndash;<div class="icon"></div>&ndash;&gt;-->
+                <!--<input type="text" placeholder="新项目">-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+
+</div>
+</body>
+
+</html>

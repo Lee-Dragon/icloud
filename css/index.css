@@ -1,0 +1,812 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'share';
+  src: url(../iconfont.woff);
+}
+
+.icon-wuxianwangluo:before {
+  content: "\e629";
+}
+
+body {
+  background: url(../images/packed-4.png);
+  background-position: top left;
+  background-repeat: repeat;
+}
+
+.list-box {
+  width: 28%;
+  height: 100vh;
+  background: #383836;
+  position: relative;
+  float: left;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.list-box .title {
+  height: 44px;
+  width: 100%;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.list-box .title .logo {
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: 0 -588px;
+  width: 56px;
+  height: 16px;
+  top: 14px;
+  left: 12px;
+  position: absolute;
+}
+
+.list-box .title .plus {
+  width: 16px;
+  height: 16px;
+  top: 14px;
+  right: 12px;
+  position: absolute;
+  color: #fff;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.list-box .plan {
+  height: 42px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.list-box .plan .clock {
+  display: inline-block;
+  height: 42px;
+  width: 42px;
+  background: url(../images/packed-5.png) no-repeat 0 -359px;
+}
+
+.list-box .plan .indro {
+  line-height: 42px;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list-box .list-group {
+  margin: 0;
+  color: #fff;
+}
+
+.list-box .list-group .list-group-item {
+  border-radius: 0;
+  background: none;
+  position: relative;
+  height: 42px;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.list-box .list-group .list-group-item > span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 40px;
+  line-height: 40px;
+  left: 50px;
+}
+
+.list-box .list-group .list-group-item.edit input {
+  display: block;
+}
+
+.list-box .list-group .list-group-item.edit > span {
+  display: none;
+}
+
+.list-box .list-group .list-group-item.purple .theme {
+  background-position: -17px -571px;
+}
+
+.list-box .list-group .list-group-item.green .theme {
+  background-position: -85px -571px;
+}
+
+.list-box .list-group .list-group-item.blue .theme {
+  background-position: -68px -571px;
+}
+
+.list-box .list-group .list-group-item.yellow .theme {
+  background-position: -34px -571px;
+}
+
+.list-box .list-group .list-group-item.brown .theme {
+  background-position: -133px -549px;
+}
+
+.list-box .list-group .list-group-item.orange .theme {
+  background-position: -51px -571px;
+}
+
+.list-box .list-group .list-group-item.pink .theme {
+  background-position: -102px -571px;
+}
+
+.list-box .list-group .list-group-item.active {
+  background: #2d2d2b;
+}
+
+.list-box .list-group .list-group-item .theme {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  background: url(../images/packed-5.png) no-repeat;
+}
+
+.list-box .list-group .list-group-item input {
+  position: absolute;
+  display: none;
+  left: 50px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.list-box .list-group .list-group-item .share {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 5px;
+  font-family: "share" !important;
+  width: 20px;
+  height: 20px;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.list-box .list-group .list-group-item .share:hover {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.remider {
+  width: 72%;
+  position: relative;
+  float: left;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  bottom: 0;
+}
+
+.remider .search-box {
+  height: 44px;
+  position: relative;
+  font-size: 20px;
+  width: 100%;
+}
+
+.remider .search-box .icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 10px;
+  background: url(../images/packed-5.png) no-repeat -138px -359px;
+}
+
+.remider .search-box input {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  border: 0;
+  background: none;
+}
+
+.remider .title-box {
+  height: 62px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 28px;
+  padding-top: 12px;
+  background: none;
+  position: relative;
+}
+
+.remider .title-box .title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  font-size: 35px;
+}
+
+.remider .title-box .title.purple {
+  color: purple !important;
+}
+
+.remider .title-box .title.green {
+  color: green !important;
+}
+
+.remider .title-box .title.blue {
+  color: blue !important;
+}
+
+.remider .title-box .title.yellow {
+  color: yellow !important;
+}
+
+.remider .title-box .title.brown {
+  color: brown !important;
+}
+
+.remider .title-box .title.orange {
+  color: orange !important;
+}
+
+.remider .title-box .title.pink {
+  color: pink !important;
+}
+
+.remider .title-box .sel-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 5%;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.remider .item-done {
+  line-height: 50px;
+  font-size: 20px;
+  padding: 0 5%;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.remider .item-done li {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.remider .item {
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.remider .item .content {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.remider .item .content input {
+  background: none;
+  border: 0;
+  outline: none;
+  display: none;
+}
+
+.remider .item.zong {
+  padding-left: 5%;
+  box-sizing: border-box;
+}
+
+.remider .item.zong .zi {
+  margin-left: 5%;
+}
+
+.remider .item.zong .clear {
+  margin-left: 70%;
+}
+
+.remider .item.zong .icon {
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: -70px -530px;
+  transition: all .3s ease;
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.remider .item.zong.active .icon {
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+  transform: rotate3d(0, 0, 1, -90deg);
+}
+
+.remider .item > .fix {
+  background: none;
+  border: 0;
+  outline: none;
+  margin-left: 12%;
+}
+
+.remider .item .del {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 100px;
+  height: 50px;
+  line-height: 40px;
+  opacity: 0;
+}
+
+.remider .item.active.purple {
+  background: rgba(128, 0, 128, 0.1);
+  border: 1px solid purple;
+}
+
+.remider .item.active.purple .del {
+  opacity: 1;
+}
+
+.remider .item.active.purple .content span {
+  display: none;
+}
+
+.remider .item.active.purple .content input {
+  display: block;
+}
+
+.remider .item.purple {
+  color: purple;
+}
+
+.remider .item.active.green {
+  background: rgba(0, 128, 0, 0.1);
+  border: 1px solid green;
+}
+
+.remider .item.active.green .del {
+  opacity: 1;
+}
+
+.remider .item.active.green .content span {
+  display: none;
+}
+
+.remider .item.active.green .content input {
+  display: block;
+}
+
+.remider .item.green {
+  color: green;
+}
+
+.remider .item.active.blue {
+  background: rgba(0, 0, 255, 0.1);
+  border: 1px solid blue;
+}
+
+.remider .item.active.blue .del {
+  opacity: 1;
+}
+
+.remider .item.active.blue .content span {
+  display: none;
+}
+
+.remider .item.active.blue .content input {
+  display: block;
+}
+
+.remider .item.blue {
+  color: blue;
+}
+
+.remider .item.active.yellow {
+  background: rgba(255, 255, 0, 0.1);
+  border: 1px solid yellow;
+}
+
+.remider .item.active.yellow .del {
+  opacity: 1;
+}
+
+.remider .item.active.yellow .content span {
+  display: none;
+}
+
+.remider .item.active.yellow .content input {
+  display: block;
+}
+
+.remider .item.yellow {
+  color: yellow;
+}
+
+.remider .item.active.brown {
+  background: rgba(165, 42, 42, 0.1);
+  border: 1px solid brown;
+}
+
+.remider .item.active.brown .del {
+  opacity: 1;
+}
+
+.remider .item.active.brown .content span {
+  display: none;
+}
+
+.remider .item.active.brown .content input {
+  display: block;
+}
+
+.remider .item.brown {
+  color: brown;
+}
+
+.remider .item.active.orange {
+  background: rgba(255, 165, 0, 0.1);
+  border: 1px solid orange;
+}
+
+.remider .item.active.orange .del {
+  opacity: 1;
+}
+
+.remider .item.active.orange .content span {
+  display: none;
+}
+
+.remider .item.active.orange .content input {
+  display: block;
+}
+
+.remider .item.orange {
+  color: orange;
+}
+
+.remider .item.active.pink {
+  background: rgba(255, 192, 203, 0.1);
+  border: 1px solid pink;
+}
+
+.remider .item.active.pink .del {
+  opacity: 1;
+}
+
+.remider .item.active.pink .content span {
+  display: none;
+}
+
+.remider .item.active.pink .content input {
+  display: block;
+}
+
+.remider .item.pink {
+  color: pink;
+}
+
+.remider .item.doing {
+  padding-left: 12%;
+  box-sizing: border-box;
+}
+
+.remider .item.doing .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 5%;
+  background: url(../images/packed-5.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.remider .item.doing .icon.purple {
+  background-position: -64px -465px;
+}
+
+.remider .item.doing .icon.green {
+  background-position: -42px -359px;
+}
+
+.remider .item.doing .icon.blue {
+  background-position: -136px -167px;
+}
+
+.remider .item.doing .icon.yellow {
+  background-position: -136px -267px;
+}
+
+.remider .item.doing .icon.brown {
+  background-position: -96px -433px;
+}
+
+.remider .item.doing .icon.orange {
+  background-position: 0 -433px;
+}
+
+.remider .item.doing .icon.pink {
+  background-position: -128px -401px;
+}
+
+.remider .item.did {
+  padding-left: 12%;
+  box-sizing: border-box;
+}
+
+.remider .item.did .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 5%;
+  background: url(../images/packed-5.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.remider .item.did .icon.purple {
+  background-position: 0 -465px;
+}
+
+.remider .item.did .icon.green {
+  background-position: -32px -401px;
+}
+
+.remider .item.did .icon.blue {
+  background-position: -74px -359px;
+}
+
+.remider .item.did .icon.yellow {
+  background-position: -136px -199px;
+}
+
+.remider .item.did .icon.brown {
+  background-position: -32px -433px;
+}
+
+.remider .item.did .icon.orange {
+  background-position: -96px -465px;
+}
+
+.remider .item.did .icon.pink {
+  background-position: -64px -401px;
+}
+
+.remider .item.xin {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.remider hr {
+  height: 1px;
+  width: 100%;
+  line-height: 50px;
+  margin: 5px 0;
+}
+
+.remider .sel {
+  display: none;
+  z-index: 100;
+  width: 355px;
+  height: 226px;
+  position: absolute;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  top: 150px;
+  right: 150px;
+  background: #fff;
+}
+
+.remider .sel input {
+  width: 314px;
+  height: 42px;
+  outline: none;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 20px;
+  line-height: 42px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.remider .sel > span {
+  display: block;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 20px 0 0 20px;
+  font-size: 16px;
+  height: 42px;
+  line-height: 22px;
+}
+
+.remider .sel .color-sel {
+  width: 314px;
+  height: 33px;
+  margin: 12px auto;
+}
+
+.remider .sel .color-sel li {
+  margin-left: 5px;
+  padding: 3px 0;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  float: left;
+  background: url(../images/stylesheet-1.png) no-repeat;
+  background-clip: content-box;
+}
+
+.remider .sel .color-sel li.purple {
+  background-position: 0 -228px;
+}
+
+.remider .sel .color-sel li.green {
+  background-position: 0 -253px;
+}
+
+.remider .sel .color-sel li.blue {
+  background-position: 0 -278px;
+}
+
+.remider .sel .color-sel li.yellow {
+  background-position: 0 -303px;
+}
+
+.remider .sel .color-sel li.brown {
+  background-position: 0 -328px;
+}
+
+.remider .sel .color-sel li.orange {
+  background-position: 0 -378px;
+}
+
+.remider .sel .color-sel li.pink {
+  background-position: 0 -353px;
+}
+
+.remider .sel .color-sel li.active.purple {
+  width: 32px;
+  height: 32px;
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: 0 -465px;
+  color: "purple";
+}
+
+.remider .sel .color-sel li.active.green {
+  width: 32px;
+  height: 32px;
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: -32px -401px;
+  color: "green";
+}
+
+.remider .sel .color-sel li.active.blue {
+  width: 32px;
+  height: 32px;
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: -74px -359px;
+  color: "blue";
+}
+
+.remider .sel .color-sel li.active.yellow {
+  width: 32px;
+  height: 32px;
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: -136px -199px;
+  color: "yellow";
+}
+
+.remider .sel .color-sel li.active.brown {
+  width: 32px;
+  height: 32px;
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: -32px -433px;
+  color: "brown";
+}
+
+.remider .sel .color-sel li.active.orange {
+  width: 32px;
+  height: 32px;
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: -96px -465px;
+  color: "orange";
+}
+
+.remider .sel .color-sel li.active.pink {
+  width: 32px;
+  height: 32px;
+  background: url(../images/packed-5.png) no-repeat;
+  background-position: -64px -401px;
+  color: "pink";
+}
+
+.remider .sel .color-sel li:nth-child(1) {
+  margin-left: 0;
+}
+
+.remider .sel .button {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: 60px;
+  width: 100%;
+  position: relative;
+  line-height: 60px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.remider .sel .button span {
+  display: inline-block;
+  line-height: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.remider .sel .button span#del {
+  width: 50px;
+  color: #ff3b30;
+}
+
+.remider .sel .button span#cancel {
+  width: 150px;
+  text-align: right;
+  color: #007aff;
+}
+
+.remider .sel .button span#enter {
+  width: 50px;
+  text-align: left;
+  font-weight: bold;
+  color: #007aff;
+}
+
+.remider .sel .button span#shu {
+  margin: 0 20px;
+}
+
+.remider #op {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  width: 60px;
+  height: 50px;
+  z-index: 100;
+  font-size: 24px;
+}
